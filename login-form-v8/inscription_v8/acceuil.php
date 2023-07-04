@@ -1,8 +1,18 @@
+<?php
+session_start();
 
+if (!isset($_SESSION["email"])) {
+    header("Location: connexion.php");
+    exit();
+}
+
+$nom = $_SESSION["nom"] ?? "";
+$prenom = $_SESSION["prenom"] ?? "";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V8</title>
+	<title>Acceuil</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -27,50 +37,12 @@
 <!--===============================================================================================-->
 </head>
 <body>
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
-				<form method="POST" action="" class="login100-form validate-form p-l-55 p-r-55 p-t-178">
-					<span class="login100-form-title">
-						Login
-					</span>
-					<div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
-						<input class="input100" type="text" name="email" placeholder="Email:">
-						<span class="focus-input100"></span>
-					</div>
-					<div class="wrap-input100 validate-input" data-validate = "Please enter password">
-						<input class="input100" type="password" name="pass" placeholder="Password:">
-						<span class="focus-input100"></span>
-					</div>
-					<div class="text-right p-t-13 p-b-23">
-						<span class="txt1">
-							Forgot
-						</span>
-						<a href="#" class="txt2">
-							Email / Password?
-						</a>
-					</div>
-					<div class="container-login100-form-btn">
-						<button type="submit" class="login100-form-btn">
-							Se connecter
-						</button>
-					</div>
-
-					<div class="flex-col-c p-t-170 p-b-40">
-						<span class="txt1 p-b-9">
-							Don’t have an account?
-						</span>
-
-						<a href="#" class="txt3">
-							Sign up now
-						</a>
-					</div>
+<h1>Bienvenue <?php echo $nom . " " . $prenom; ?> !</h1>
+				<form action="deconnexion.php" method="POST" class="btn btn-success">
+						<button type="submit" name="login">
+							Deconnection
+						</button></a>
 				</form>
-			</div>
-		</div>
-	</div>
-	
-	
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
@@ -86,7 +58,6 @@
 <!--===============================================================================================-->
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
-	<script src="js/main.js"></script>
-
+	<script src="js/main.js"></script>    
 </body>
 </html>

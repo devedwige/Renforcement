@@ -6,6 +6,7 @@ try {
 } catch (PDOException $e) {
     die("Erreur :" . $e->getMessage());
 }
+header("location:connexion.php");
 $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
 $date_naissance = $_POST['date'];
@@ -16,6 +17,5 @@ $mot_de_passe = password_hash($_POST['pass'], PASSWORD_DEFAULT);
          VALUES ('$nom','$prenom','$date_naissance','$sexe','$email','$mot_de_passe')";
         mysqli_query($bd, $sql);
         // $message = "Ajout éffectué avec succès.";
-        echo '<script> alert("compte cree avec succes! voulez vous vous connecter maintenant?")</script>';
-        // echo '<script> window.location.href="../Se_connecter.php"</script>';
+        echo '<script> alert("compte cree avec succes! voulez vous vous connecter maintenant?")</script>';   
 ?>
