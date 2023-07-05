@@ -129,7 +129,7 @@
 											"top": 214,
 											"width": 154.2861328125,
 											"height": 13,
-											"text": "+Nom: string",
+											"text": "+id: int",
 											"horizontalAlignment": 0
 										},
 										{
@@ -146,7 +146,7 @@
 											"top": 229,
 											"width": 154.2861328125,
 											"height": 13,
-											"text": "+Prenom: string",
+											"text": "+nom: string",
 											"horizontalAlignment": 0
 										},
 										{
@@ -163,7 +163,7 @@
 											"top": 244,
 											"width": 154.2861328125,
 											"height": 13,
-											"text": "+Date de naissance: string",
+											"text": "+prenom: string",
 											"horizontalAlignment": 0
 										},
 										{
@@ -180,7 +180,7 @@
 											"top": 259,
 											"width": 154.2861328125,
 											"height": 13,
-											"text": "+sexe: string",
+											"text": "+date de naissance: string",
 											"horizontalAlignment": 0
 										},
 										{
@@ -197,7 +197,7 @@
 											"top": 274,
 											"width": 154.2861328125,
 											"height": 13,
-											"text": "+email: string",
+											"text": "+sexe: string",
 											"horizontalAlignment": 0
 										},
 										{
@@ -214,6 +214,23 @@
 											"top": 289,
 											"width": 154.2861328125,
 											"height": 13,
+											"text": "+email: string",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAGJJUQ0KhtdzKM=",
+											"_parent": {
+												"$ref": "AAAAAAGJG9z38uNTftw="
+											},
+											"model": {
+												"$ref": "AAAAAAGJJUQz+htagKw="
+											},
+											"font": "Arial;13;0",
+											"left": 213,
+											"top": 304,
+											"width": 154.2861328125,
+											"height": 13,
 											"text": "+mot de passe: string",
 											"horizontalAlignment": 0
 										}
@@ -222,7 +239,7 @@
 									"left": 208,
 									"top": 209,
 									"width": 164.2861328125,
-									"height": 98
+									"height": 113
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -245,7 +262,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 213,
-											"top": 312,
+											"top": 327,
 											"width": 154.2861328125,
 											"height": 13,
 											"text": "+Inscription()",
@@ -262,7 +279,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 213,
-											"top": 327,
+											"top": 342,
 											"width": 154.2861328125,
 											"height": 13,
 											"text": "+Connexion()",
@@ -279,7 +296,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 213,
-											"top": 342,
+											"top": 357,
 											"width": 154.2861328125,
 											"height": 13,
 											"text": "+Deconnexion()",
@@ -288,7 +305,7 @@
 									],
 									"font": "Arial;13;0",
 									"left": 208,
-									"top": 307,
+									"top": 322,
 									"width": 164.2861328125,
 									"height": 53
 								},
@@ -326,7 +343,7 @@
 							"left": 208,
 							"top": 184,
 							"width": 164.2861328125,
-							"height": 176,
+							"height": 191,
 							"nameCompartment": {
 								"$ref": "AAAAAAGJG9z38eNOJ0I="
 							},
@@ -388,8 +405,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGJG9z38ONLnYQ="
 							},
-							"name": "Nom",
-							"type": "string"
+							"name": "id",
+							"type": "int"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -397,7 +414,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGJG9z38ONLnYQ="
 							},
-							"name": "Prenom",
+							"name": "nom",
 							"type": "string"
 						},
 						{
@@ -406,7 +423,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGJG9z38ONLnYQ="
 							},
-							"name": "Date de naissance",
+							"name": "prenom",
 							"type": "string"
 						},
 						{
@@ -415,7 +432,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGJG9z38ONLnYQ="
 							},
-							"name": "sexe",
+							"name": "date de naissance",
 							"type": "string"
 						},
 						{
@@ -424,12 +441,21 @@
 							"_parent": {
 								"$ref": "AAAAAAGJG9z38ONLnYQ="
 							},
-							"name": "email",
+							"name": "sexe",
 							"type": "string"
 						},
 						{
 							"_type": "UMLAttribute",
 							"_id": "AAAAAAGJG+QygeQM8Ss=",
+							"_parent": {
+								"$ref": "AAAAAAGJG9z38ONLnYQ="
+							},
+							"name": "email",
+							"type": "string"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAGJJUQz+htagKw=",
 							"_parent": {
 								"$ref": "AAAAAAGJG9z38ONLnYQ="
 							},
